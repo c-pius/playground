@@ -1,0 +1,12 @@
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: c-pius/lifecycle-manager/.github/actions/hello-world-action@chore/shared-github-actions
+        with:
+          who-to-greet: 'Mona the Octocat'
